@@ -1,0 +1,48 @@
+@import "~bootstrap/scss/bootstrap";
+
+$searchWidth: 32rem;
+
+form[role=search] {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+
+  input[type="search"] {
+    transition: all ease 150ms;
+
+    &:focus {
+      width: $searchWidth;
+    }
+  }
+
+  .search-results {
+    position: absolute;
+    top: 48px;
+    width: $searchWidth;
+    overflow: hidden;
+    background: #fafafa;
+    border: 1px solid #ddd;
+    pointer-events: none;
+    opacity: 0;
+    transition: all ease 150ms;
+
+    &.show {
+      opacity: 1;
+      pointer-events: all;
+    }
+
+    &-item {
+      width: $searchWidth;
+      padding: 1rem;
+      border-top: 1px solid #ddd;
+
+      &.template {
+        display: none;
+      }
+
+      &:first-child {
+        border-top: none;
+      }
+    }
+  }
+}

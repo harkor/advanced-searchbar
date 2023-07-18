@@ -1,0 +1,28 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap w/ Vite</title>
+</head>
+<body>
+<nav class="navbar bg-light">
+    <div class="container-fluid">
+        <a class="navbar-brand">Navbar</a>
+        <form role="search">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+            <div class="search-results">
+                <div class="search-results-item template">
+                    <h3>{{ title }}</h3>
+                    <p>{{ body }}</p>
+                </div>
+                <div class="search-results-item d-grid">
+                    <a href="#" class="btn btn-primary">See more results</a>
+                </div>
+            </div>
+        </form>
+    </div>
+</nav>
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>
